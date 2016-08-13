@@ -1,6 +1,6 @@
 require "rspec_api_documentation/dsl"
 
-  RspecApiDocumentation.configure do |config|
+RspecApiDocumentation.configure do |config|
   # Set the application that Rack::Test uses
   config.app = Rails.application
 
