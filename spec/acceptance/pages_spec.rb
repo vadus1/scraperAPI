@@ -17,7 +17,7 @@ RSpec.resource "Pages" do
     DESC
 
     let "url" do
-      "https://www.ruby-lang.org/es/"
+      'http://www.example.com'
     end
 
     example_request "POST /v1/pages" do
