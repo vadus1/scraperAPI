@@ -29,14 +29,14 @@ RSpec.resource "Pages" do
 
   get "/v1/pages" do
     before do
-      2.times do
+      4.times do
         FactoryGirl.create(:page)
       end
     end
     example_request "GET /v1/pages" do
       expect(status).to eq 200
       pages = JSON.parse(response_body)
-      expect(pages["data"].size).to eq 2
+      expect(pages["data"].size).to eq 4
     end
   end
 end
